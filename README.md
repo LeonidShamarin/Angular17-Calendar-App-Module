@@ -7,6 +7,11 @@ This is a simple calendar application that allows users to add and delete calend
 1. Form to add a calendar appointment
 2. Ability to delete the appointment
 
+## Live Demo
+
+You can view the live demo of the application [here](https://leonid-shamarin-calendar-app.vercel.app/calendar).
+
+
 ## Installation
 
 To get started with the project, follow these steps:
