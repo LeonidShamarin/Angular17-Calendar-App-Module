@@ -1,27 +1,85 @@
-# CalendarApp
+# Simple Calendar Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+This is a simple calendar application that allows users to add and delete calendar appointments. The application uses the JavaScript `Date` object to work with time and dates.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Form to add a calendar appointment
+2. Ability to delete the appointment
 
-## Code scaffolding
+## Installation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To get started with the project, follow these steps:
 
-## Build
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/simple-calendar-app.git
+    cd simple-calendar-app
+    ```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Install the dependencies:
+    ```sh
+    npm install
+    ```
 
-## Running unit tests
+3. Run the application:
+    ```sh
+    ng serve
+    ```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+4. Open your browser and navigate to `http://localhost:4200`.
 
-## Running end-to-end tests
+## Usage
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Adding an Appointment
 
-## Further help
+1. Fill out the appointment form with the date, time, and description.
+2. Click the "Add Appointment" button to add the appointment to the calendar.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Deleting an Appointment
+
+1. Locate the appointment you want to delete in the list of appointments.
+2. Click the "Delete" button next to the appointment to remove it from the calendar.
+
+## Working with Dates and Times
+
+This application uses the JavaScript `Date` object to handle all date and time operations. Here are some examples of how the `Date` object is used:
+
+- To create a new date:
+    ```javascript
+    const date = new Date();
+    ```
+
+- To set a specific date and time:
+    ```javascript
+    const date = new Date('2024-06-15T09:00:00');
+    ```
+
+- To format a date:
+    ```javascript
+    const formattedDate = date.toLocaleDateString();
+    const formattedTime = date.toLocaleTimeString();
+    ```
+
+## Contributing
+
+If you would like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature-name`).
+3. Make your changes.
+4. Commit your changes (`git commit -m 'Add some feature'`).
+5. Push to the branch (`git push origin feature/your-feature-name`).
+6. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+If you have any questions or suggestions, feel free to reach out to me at [leonideko1@gmail.com](mailto:leonideko1@gmail.com).
+
+---
+
+Thank you for using the Simple Calendar Application! I hope it helps you stay organized and manage your appointments effectively.
