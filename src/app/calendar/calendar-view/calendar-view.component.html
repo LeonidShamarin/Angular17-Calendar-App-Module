@@ -1,0 +1,30 @@
+<app-appointment-form></app-appointment-form>
+
+<div class="calendar-controls">
+  <button mat-button (click)="previousMonth()">Previous Month</button>
+  <h2>{{ currentMonth | date:'MMMM yyyy' }}</h2>
+  <button mat-button (click)="nextMonth()">Next Month</button>
+</div>
+
+<div class="calendar">
+  <div *ngFor="let date of dates" class="calendar-day">
+    <h3>{{ date | date:'d' }}</h3>
+    <div cdkDropList
+         [cdkDropListData]="appointments$ | async | appointmentFilter:date"
+         (cdkDropListDropped)="onDrop($event)">
+      <div *ngFor="let appointment of appointments$ | async | appointmentFilter:date"
+           class="appointment"
+           cdkDrag>
+        {{ appointment.title }}
+        <div>
+          <button mat-icon-button (click)="editAppointment(appointment)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button (click)="deleteAppointment(appointment.id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

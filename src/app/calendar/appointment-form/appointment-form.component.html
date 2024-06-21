@@ -1,0 +1,31 @@
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Title" formControlName="title" />
+  </mat-form-field>
+  <mat-form-field>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Date"
+      formControlName="date"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <button
+    mat-raised-button
+    color="primary"
+    type="submit"
+    [disabled]="!appointmentForm.valid"
+  >
+    {{ editingAppointment ? "Update" : "Add" }} Appointment
+  </button>
+  <button
+    mat-button
+    type="button"
+    (click)="resetForm()"
+    *ngIf="editingAppointment"
+  >
+    Cancel
+  </button>
+</form>
