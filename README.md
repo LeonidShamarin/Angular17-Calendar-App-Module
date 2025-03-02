@@ -20,8 +20,7 @@ Angular Calendar App is a web application developed using the Angular framework 
 
 ## Live Demo
 
-You can view the live demo of the application [here](https://leonid-shamarin-calendar-app.vercel.app/calendar).
-
+You can view the live demo of the application [here](https://leonid-shamarin-angular17-calendarapp.vercel.app/calendar).
 
 ## Installation
 
